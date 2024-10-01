@@ -1,10 +1,31 @@
 @charset "UTF-8";
+
+html{
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    background-color:white;
+}
+
+.t1 {
+    font-size: 60px;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+    color: black;
+    text-shadow: 2px 1px 1px rgba(72, 231, 72, 0.529);
+    border: 5px solid rgb(2, 2, 2);
+}
+
 body {
+    width: 1000px;
     font-family: 'Times New Roman', Times, serif;
     line-height: 2.5;
     background-color:#ffffffff ;
     color: black;
     text-align: center;
+    margin: 0 auto;
+    padding: 0 20px 20px 20px;
+    border: 5px solid white;
 }
 
 header {
@@ -12,6 +33,7 @@ header {
     color: black;
     text-align: center;
     padding: 20px 0;
+    
 }
 
 nav a {
@@ -33,4 +55,41 @@ figure {
 
 p {
     margin: 15px 0;
+}
+
+.div {
+    background-color: rgb(125, 69, 32);
+    text-align: left;
+    box-sizing: content-box;
+    padding-left: 15px;
+    font-size:small;
+}
+
+.campo {
+    background-color: rgb(125, 69, 32);
+    text-align: left;
+    box-sizing: content-box;
+    padding-left: 15px;
+    font-size:small;
+    
+}
+
+.container {
+    background-color: rgba(72, 231, 72, 0.529);
+    border: 5px solid rgb(2, 2, 2);
+}
+
+.img {
+    background-color: rgb(125, 69, 32);
+    text-align: center;
+    box-sizing: content-box;
+    margin: 0 auto;
+    padding: 0 20px 20px 20px;
+    border: 5px solid rgb(2, 2, 2);
+}
+
+nav a {
+    background-color: none;
+    box-sizing: content-box;
+    box-shadow: inset;
 }

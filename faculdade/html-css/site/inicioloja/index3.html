@@ -1,26 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serviços - Cadastro</title>
     <link rel="stylesheet" href="style.css">
+    <h1>CADASTRE-SE<h1>
 </head>
 <body>
-    <h1>Cadastre-se para um melhor atendimento.<h1>
-        <br>
-        <form>
+        <hr>
+        <fieldset>
+            <legend>ÁREA DE CADASTRO</legend>
+            <!-- container -->
+             <!--fórmulário usando Javascript-->
+             <form action="#" method="post" oninput="total.value = (doces.valueAsNumber * 100)">
+
+        <div class="campo">
             <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
-        
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome..." style="width: 20em;" required /><br/></div>
+        <div class="campo">
             <label for="contato">Contato:</label>
-            <input type="tel" id="contato" nome="contato" placeholder="Digite seu telefone" required>
-
+            <input type="tel" id="contato" nome="contato" placeholder="Digite seu telefone..." required /><br/></div>
+        <div class="campo">
             <label for="email">E-mail:</label>
-            <input type="email" id='email' name="email" placeholder="digite seu e-mail" required>
-
-            <button type="sumbit">Cadastrar</button>
+            <input type="email" id='email' name="email" placeholder="digite seu e-mail..." required></div>
+        <div class="campo">
+            <label>Repita o E-mail:</label>
+            <input type="email" name="email_repeti" id="email_repeti" placeholder="Digite o e-mail novamente..." required oninput="check(this)" /><br/><br/></div>
+        <div class="campo">
+            <label>Data de entrega:</label>
+            <input type="date" name="dt_entrega" id="dt_entrega" required/><br/><br></div>
+        <div class="campo">
+            <label>Pedido</label>
+            <textarea name="message" style="width: 40em;" placeholder="Faça o seu pedido!" required></textarea><br/><br/></div>
+        <div class="campo">
+            <label>Digite o endereço da entrega:</label>
+            <input type="text" name="rua" id="rua" placeholder="Digite o endereço da entrega..." required/><br/><br></div>
+        <div class="campo">
+            <label>Número:</label>
+            <input type="number" name="numero" id="numero" placeholder="Digite o número..." required /><br/><br></div>
+        <div class="campo">
+            <label>Complemento:</label>
+            <input type="text" name="complemento" id="complemento" placeholder="Digite o complemento..." required /><br/><br></div>
+        <div class="campo">
+            <label>Código promocional:</label>
+            <input type="text" name="promo" id="promo" maxlength="6" pattern="[A-Za-zO-9]{6}" title="Código promocional consiste em 6 caracteres alfanuméricos."/><br/><br/></div>
+        <button type="sumbit">Enviar</button>
         </form>
+    </fieldset>
     <a href="index.html">voltar ao inicio</a>
 </body>
 </html>
