@@ -1,0 +1,36 @@
+@charset "UTF-8";
+body {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 2.5;
+    background-color:#ffffffff ;
+    color: black;
+    text-align: center;
+}
+
+header {
+    background-color: rgb(125, 69, 32);
+    color: black;
+    text-align: center;
+    padding: 20px 0;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    margin: 0 15 px;
+    padding: 150px 40px;
+}
+
+h2 {
+    color: black;
+    margin-bottom: 10px;
+}
+
+figure {
+    text-align: center;
+    margin: 20px 0;
+}
+
+p {
+    margin: 15px 0;
+}
