@@ -7,19 +7,22 @@
     <title>Audaces Skydiver's</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
 </head>
-<body>
-        <nav class="navbar bg-body-tertiary" data-bs-theme="dark">
-            <!--TÍTULO DA PÁGINA-->
-            <div class="navbar-brand">
+<body style="background-image: url(imagens/fundopag.jpg);">
+
+    <!--COR DA BARRA DE NAVEGAÇÃO-->
+    <nav class="navbar bg-body-tertiary" data-bs-theme="dark">
+        <div class="navbar-brand">     
             <a class="navbar-brand mb-0 h1">AUDACES SKYDIVER'S</a>
-            </div>
-            <!--BARRA DE NAVEGAÇÃO-->
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <button><i class="bi bi-airplane-fill" type="btn btn-dark" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></i></i>
-                    </button>
+        </div>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <button class="navbar-toggler" type="btn btn-dark-lg" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle-navigation">
+                    <span class="navbar-toggler-incon"></span>
+                </button>
+            </a>
+        </div>
+                    <!--CONTEÚDO DO MENU-->
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <!--CONTEÚDO DO MENU-->
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="1-home.html">HOME</a>
@@ -33,19 +36,11 @@
                             <li class="nav-item">   
                                 <a class="nav-link active" href="4-servicos.html">SERVIÇOS</a>
                             </li>
+                            <!--CASO ADICIONE MAIS COISA NO FUTURO-->
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" aria-disabled="true"></a>
-                            </li>
                         </ul>
                         <form class="d-flex" role="search">
                             <input class="form-control me-2" type="search" placeholder="Faça a sua pesquisa..." aria-label="Search">
@@ -55,12 +50,18 @@
                 </a>
             </div>
         </nav>
-        <div class="img">
-            <img src="imagens/salto.jpeg" alt="imagem 1">
-            <img src="imagens/salto2.jpg" alt="imagem 2">
-            <img src="imagens/salto3.jpg" alt="imagem 3">
-        </div>
-        
+        <h1>SEJAM BEM VINDO(A) AO AUDACES PIC</h1>
+        <div class="d-flex flex-row mb-3">
+            <div class="p-2"><img src="" alt=""></div>
+            <div class="p-2">Flex item 2</div>
+            <div class="p-2">Flex item 3</div>
+          </div>
+          <div class="d-flex flex-row-reverse">
+            <div class="p-2"><img src="" alt=""></div>
+            <div class="p-2">Flex item 2</div>
+            <div class="p-2">Flex item 3</div>
+          </div>
+
 <!--Área do js-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
@@ -71,8 +72,21 @@
             box-sizing: border-box;
             text-align: center;
             font-family: 'Times New Roman', Times, serif;
+            color: white;
         }
-        </style>
 
+        body {
+    background-size: cover; /*faz a imagem cobrir a tela toda*/
+    background-position: top; /*Centraliza a imagem no fundo*/
+    background-repeat: no-repeat; /*faz com que a imagem não repita*/
+    background-attachment:scroll; /*fixa a imagem enquanto rola a pag*/
+    position: relative;
+        }
+
+        .navbar-brand {
+            text-align: center;
+        }
+
+    </style>
 </body>
 </html>
