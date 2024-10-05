@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUDACES SKYDIVER'S</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <!--BARRA DE NAVEGAÇÃO DA PÁGINA-->
+    <nav class="navbar bg-body-tertiary" data-bs-theme="dark">
+        <div class="navbar-brand">
+            <a class="navbar-brand mb-0 h1">ÁREA DE CADASTRO</a>
+        </div>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle-navigation">
+                    <span class="navbar-toggler-incon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me=auto mb-2 mb-lg-2">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="1-home.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="2-quemsomos.html">QUEM SOMOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="3-cadastro.html">CADASTRE-SE</a>
+                        </li>    
+                        <li class="nav-item">   
+                            <a class="nav-link active" href="4-servicos.html">SERVIÇOS</a>
+                        </li>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#"></a>Another Action</li>
+                                    <li><a class="dropdown-item" href="#"></a>Something else here</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled"aria-disabled="true"></a>
+                            </li>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Faça a sua pesquisa..." aria-label="Search">
+                        <button class="btn btn-outline-success" type="sumbit">Pesquisar</button>
+                    </form>
+                </div>
+            </a>
+        </div>
+    </nav>
+    <!--ÁREA DO FORMULÁRIO-->
+    <hr><fieldset>
+        <legend>CADASTRE-SE</legend>
+        <hr>
+            <form action="#" method="post" oninput="selec.value=(salto.valueAsNumber)">
+    <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome." required>
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">E-mail</label>
+        <input type="email" class="form-control" id="email" placeholder="exemplo@exemplo.com" required>
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Confirme o E-mail</label>
+        <input type="email" class="form-control" id="email" placeholder="exemplo@exemplo.com" required>
+    </div>
+    <div class="mb-3">
+        <label for="data" class="form-label">Data</label>
+        <input type="date" class="form-control" id="data" required>
+    </div>
+    <div class="mb-3">
+        <label for="text" class="form-label">Login</label>
+        <input type="text" class="form-control" id="login" required placeholder="Cadastre um login.">
+    </div>
+    <div class="mb-3">
+        <label for="senha" class="form-label">Senha</label>
+        <input type="password" class="form-control" id="senha" aria-describedby="passwordhelpBlock" placeholder="Sua senha deverá ter de 8-20 caracteres, e possuir letras e números." required>
+    </div>
+    <div class="mb-3">
+        <label for="confirmarSenha" class="form-label">Confirme a senha</label>
+        <input type="password" class="form-control" id="confirmarSenha" aria-describedby="passwordhelpBlock" placeholder="Digite novamente a senha, ela deverá ser igual a digitada anteriormente." required>
+    </div>
+    <button type="button" onclick="verificarSenhas()">Confirmar senha</button>
+    <div id="mensagemn" style="color:red; margin-top: 10px;" aria-live="assertive">
+    </div>
+    <div id="mensagemp" style="color: green; margin-top: 10px;" aria-live="assertive">
+    </div>
+    <div class="mb-3">
+        <label for="salto" class="form-label">Escolha o salto desejado</label>
+        <select name="salto" id="salto" class="form-select" onchange="Valor()" required>
+            <option value="">-- Escolha a sua opção --</option>
+            <option value="500">Freestyle - R$ 500</option>
+            <option value="600">FreeFly - R$ 600</option>
+            <option value="700">Formação em Queda Livre (FQL) - R$ 700</option>
+            <option value="650">Estilo e Precisão - R$ 650</option>
+            <option value="800">Pouso de Alta Performance (Swooping) - R$ 800</option>
+            <option value="1000">HALO (High Altitude-Low Opening) - R$ 1000</option>
+            <option value="550">Duplo Paraquedas R$ 550</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-dark">Enviar</button>
+    </form>
+    </fieldset>
+
+    <div id="resultado" style="margin-top: 10px;"></div>
+    <script>
+        function Valor() {
+            // Obtém o elemento select!
+            const select = document.getElementById("salto");
+            // Obtém o valor do salto selecionado.
+            const valor = selec.value;
+            
+            const saltoSelecionado = select.options[select.selectedIndex].getAttribute("data-salto");
+            // Obtém o elemento div onde será mostrado o resultado.
+            const resultado = document.getElementById("resultado");
+
+            //Atualiza o texto com o valor do salto selecionado.
+            if (valor) {
+                resultado.textContent = 'Valor do salto selecionado: R$ ${valor}';
+            } else {
+                resultado.textContent = ""; //Limpa o resultado se nada estiver selecionado.
+            }
+        }
+        
+        function verificarSenhas() {
+                const senha = document.getElementById('senha').value;
+                const confirmarSenha = document.getElementById('confirmarSenha').value;
+                
+                const mensagemp = document.getElementById('mensagemp'); //Referencia a variável "MENSAGEMP".
+                const mensagemn = document.getElementById('mensagemn'); //Referencia a variável "MENSAGEMN".
+                
+                mensagemp.textContent = ''; //LIMPA AS MENSAGENS ANTES DE CADA VERIFICAÇÃO.
+                mensagemn.textContent = ''; //LIMPA AS MENSAGENS ANTES DE CADA VERIFICAÇÃO.
+                
+                if (senha === confirmarSenha) { //VERIFICA SE AS SENHAS SÃO IGUAIS.
+                    mensagemp.textContent = 'Senha correta, pode prosseguir.';
+                } else {
+                    mensagemn.textContent = 'Senhas não coincidem, tente novamente!';
+                }
+            }
+    </script>
+
+    <!--Área do js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
