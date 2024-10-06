@@ -1,0 +1,28 @@
+h1 {
+    font-family: 'Playfair Display', serif;   
+    font-size: 3em;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+    text-shadow: 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+body {
+background-size:cover; /*faz a imagem cobrir a tela toda*/
+background-position:center; /*Centraliza a imagem no fundo*/
+background-repeat: no-repeat; /*faz com que a imagem não repita*/
+background-attachment:scroll; /*fixa a imagem enquanto rola a pag*/
+}
+
+.navbar-brand {
+    text-align: center;
+}
+
+.navbar-nav {
+    color: white;
+}
+
+#buttonbar {
+    margin-left: 10px; /* Adiciona um espaço à esquerda do botão */
+}
